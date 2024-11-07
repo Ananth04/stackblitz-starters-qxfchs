@@ -2,45 +2,101 @@
   box-sizing: border-box;
 }
 
+
 body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
-  color: black;
-  background-color: white;
+  font-family: MercurySSm-Book-Pro_Web, serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  margin: auto auto;
+  padding: 0;
+  background-color: #fff;
+  color: #0a2458;
+  font-size: 16px;
+  line-height: 170%;
+  padding-left: 35px;
+  padding-right: 35px;
 }
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem;
-  gap: 0.5rem;
-  border-bottom: solid 1px #aaa;
-  background-color: #eee;
+::selection {
+  background: #9c1919;
+  color: #fff;
 }
 
-nav a {
-  display: inline-block;
-  min-width: 9rem;
-  padding: 0.5rem;
-  border-radius: 0.2rem;
-  border: solid 1px #aaa;
+/* Header styles */
+header {
+  padding: 20px;
   text-align: center;
+  margin: auto auto;
+}
+
+.date {
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
+.headline {
+  font-size: 1.5em;
+  margin: 0 auto;
+  max-width: 800px;
+  line-height: 1.6;
+  padding: 0 15px;
+  word-wrap: break-word;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 0 20px;
+  color: #0064bc;
   text-decoration: none;
-  color: #555;
+  transition: .2s ease;
 }
 
-nav a[aria-current='page'] {
-  color: #000;
-  background-color: #d4d4d4;
+.breadcrumb p{
+  display: inline-block;
+  border-top: 1px solid #d7dae2;
+  border-bottom: 1px solid #d7dae2;
+  padding: 5px 10px;
 }
 
-main {
-  padding: 1rem;
+/* Introduction and section styles */
+.introduction, .first-section, .second-section {
+  padding: 20px;
+  margin: auto auto;
+  max-width: 800px;
 }
 
-h1 {
-  font-weight: bold;
-  font-size: 1.5rem;
+h2 {
+  text-decoration: underline;
+  font-size: 1.3em;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  .breadcrumb {
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+  }
+
+  .headline {
+    font-size: 1.2em;
+  }
+
+  h2 {
+    font-size: 1.1em;
+  }
 }
